@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>m_v_priest的博客</title>
+  <meta name="author" content="m_v_priest">
+  
+  <meta name="description" content="m_v_priest的github hexo博客">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="m_v_priest的博客"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="m_v_priest的博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">m_v_priest的博客</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article id="post-401 HTML/表格" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-26T05:53:07.265Z"><a href="/2020/04/26/401 HTML/表格/">2020-04-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/26/401 HTML/表格/">401 HTML/表格</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>html5 已经废弃&lt;table&gt;的cellspacing和cellpadding属性, 现在要通过css来定义表格样式.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">//表格的css</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">'text/css'</span>&gt;</span></span><br><span class="line">    table &#123;</span><br><span class="line">        border-collapse: collapse; //collapse能让表格的边框重叠在一起, 而非是双线</span><br><span class="line">        border: solid 1px Black;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    table td &#123;</span><br><span class="line">        border: solid 1px Black;</span><br><span class="line">        padding: 3px</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//表格本身</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span> //定义本</span><br><span class="line">    <span class="tag">&lt;<span class="name">caption</span>&gt;</span>表格标题<span class="tag">&lt;/<span class="name">caption</span>&gt;</span> //定义表格标题</span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> //定义行(table row), 表格中, 第一行是留给表头的, 第二行开始都是数据行.</span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题1<span class="tag">&lt;/<span class="name">th</span>&gt;</span> //定义表头(table header cell)</span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题2<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题3<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1-1<span class="tag">&lt;/<span class="name">td</span>&gt;</span> //定义表格的单元(table data cell)</span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1-2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1-3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2-1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2-2<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2-3<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article id="post-401 HTML/表单" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-26T05:52:49.755Z"><a href="/2020/04/26/401 HTML/表单/">2020-04-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/26/401 HTML/表单/">401 HTML/表单</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>用&lt;form&gt; 元素来定义 HTML 表单.<br><br/></p>
+<h2 id="单行输入框-lt-input-type-”text”-gt"><a href="#单行输入框-lt-input-type-”text”-gt" class="headerlink" title="单行输入框 &lt;input type=”text”&gt;"></a>单行输入框 &lt;input type=”text”&gt;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    用户名 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">'userName'</span>   </span></span><br><span class="line"><span class="tag">    <span class="attr">value</span>=<span class="string">'zzr'</span></span></span><br><span class="line"><span class="tag">    <span class="attr">size</span>=<span class="string">'40'</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>能给本表单元素起个名字. <br />要想JavaScript拿到表单元素中的值, 必须给表单元素添加name属性! 否则无法引用到本表单元素.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>输入框中的值</td>
+</tr>
+<tr>
+<td>size</td>
+<td>设置文本框的长度, 注意, 值是个字符串</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h2 id="提交按钮-lt-input-type-”submit”-gt"><a href="#提交按钮-lt-input-type-”submit”-gt" class="headerlink" title="提交按钮 &lt;input type=”submit”&gt;"></a>提交按钮 &lt;input type=”submit”&gt;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'usrName'</span> <span class="attr">value</span>=<span class="string">'defalut your name'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">'usrPwd'</span> <span class="attr">value</span>=<span class="string">'defalut your password'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>按钮提交后, get方法会把你表单的值, 放在url中传送, 如下<br>http://…/xxx.php <strong>?usrName=</strong> defalut+your+name <strong>&amp;usrPwd=</strong> defalut+your+password<br><br></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>action</td>
+<td>注意: <strong>action属性是属于&lt;form&gt;元素的, 而不是属于&lt;input&gt;元素.</strong><br />如果省略 action 属性，则 action 会被设置为当前页面 (即本表单会被提交到当前页面)。</td>
+</tr>
+<tr>
+<td>formaction</td>
+<td>formaction 属性(单词拆开来即form action), <strong>可用在 type=”submit” 以及 type=”image”上</strong>。<br /><strong>该属性的权限比action属性更高!</strong> 如果表单中两个属性都存在, 则只听formaction的, 而忽略掉action属性.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>name属性必填! 只有设置了 name 属性的表单元素, 才能在提交表单时传递它们的值到服务器上。</td>
+</tr>
+<tr>
+<td>value</td>
+<td>对于文本框来说, value属性就是文本框中的文字内容.<br />而对于submit按钮来说, value属性是按钮上的文字.</td>
+</tr>
+<tr>
+<td><br/></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="关于formaction属性-比如"><a href="#关于formaction属性-比如" class="headerlink" title="关于formaction属性, 比如:"></a>关于formaction属性, 比如:</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"123.php"</span>  <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span>  //action属性</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'usrName'</span> <span class="attr">value</span>=<span class="string">'defalut your name'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">formaction</span> = <span class="string">'456.js'</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span> // formaction属性 <span class="tag">&lt;<span class="name">--会提交给456.js,</span> 因为<span class="attr">formaction</span>属性的权限最高</span></span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="上传文件-lt-input-type-”file”-gt"><a href="#上传文件-lt-input-type-”file”-gt" class="headerlink" title="上传文件 &lt;input type=”file”&gt;"></a>上传文件 &lt;input type=”file”&gt;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"click to upload files"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>multiple</td>
+<td>允许上传多个文件. <br />multiple属性适用于以下输入类型：email 和 file。</td>
+</tr>
+</tbody></table>
+ <br>
+
+<h2 id="表单飞地"><a href="#表单飞地" class="headerlink" title="表单飞地"></a>表单飞地</h2><p>一个表单离散元素, 只要有form属性, 并且给它赋值一个某表单的id属性的值, 该离散元素, 就属于某表单的势力范围内.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"GET"</span> <span class="attr">id</span>=<span class="string">'form_china'</span>&gt;</span> //id属性</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'chineseName'</span> <span class="attr">value</span>=<span class="string">'zzr'</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'chineseName'</span> <span class="attr">value</span>=<span class="string">'wyy'</span> <span class="attr">form</span>=<span class="string">'form_china'</span>&gt;</span>   //from属性 <span class="tag">&lt;<span class="name">--注意,</span> 这个<span class="attr">wyy</span>表单, 位于 <span class="attr">form</span> 元素之外，但由于设定了<span class="attr">form</span>属性, 捆绑了上面<span class="attr">form</span>的<span class="attr">id</span>值, 所以它仍然是上面表单的一部分。从提交按钮后, 可以看出, <span class="attr">wyy</span>也被提交了<span class="attr">.</span></span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="表单域组合框-lt-fieldset-gt"><a href="#表单域组合框-lt-fieldset-gt" class="headerlink" title="表单域组合框 &lt;fieldset&gt;"></a>表单域组合框 &lt;fieldset&gt;</h2><p>&lt;fieldset&gt; 元素, 可以把n个表单元素, 用一个外框线包裹起来, 相当于逻辑上分组. </p>
+<p>并且还可以使用&lt;legend&gt; 元素, 为 &lt;fieldset&gt; 元素定义一个标题。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.js"</span> <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span> //组合框</span><br><span class="line">        <span class="tag">&lt;<span class="name">legend</span>&gt;</span>登录信息<span class="tag">&lt;/<span class="name">legend</span>&gt;</span> //组合框的标题</span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'usrName'</span> <span class="attr">value</span>=<span class="string">'your name'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">'usrPwd'</span> <span class="attr">value</span>=<span class="string">'your password'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="多行文本框-lt-textarea-gt"><a href="#多行文本框-lt-textarea-gt" class="headerlink" title="多行文本框 &lt;textarea&gt;"></a>多行文本框 &lt;textarea&gt;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"发送地址"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">textarea</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">"message"</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">rows</span>=<span class="string">"10"</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">cols</span>=<span class="string">"20"</span>&gt;</span></span><br><span class="line">    内容...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rows</td>
+<td>文本框的可见行数</td>
+</tr>
+<tr>
+<td>cows</td>
+<td>文本框的可见宽度</td>
+</tr>
+</tbody></table>
+<br/>
+
+<h2 id="单选按钮输入-lt-input-type-”radio”-gt"><a href="#单选按钮输入-lt-input-type-”radio”-gt" class="headerlink" title="单选按钮输入 &lt;input type=”radio”&gt;"></a>单选按钮输入 &lt;input type=”radio”&gt;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    您的性别: <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"男性"</span> <span class="attr">name</span>=<span class="string">'sex'</span>&gt;</span> 男性 <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"female"</span> <span class="attr">name</span>=<span class="string">'sex'</span>&gt;</span> 女性</span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">    您的年龄: <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">'age'</span> <span class="attr">value</span>=<span class="string">0</span>&gt;</span> 成年 <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">'age'</span> <span class="attr">value</span>=<span class="string">1</span>&gt;</span> 未成年</span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>name属性相同者, 会分在同一组. 即, 每组有自己的单选.</td>
+</tr>
+</tbody></table>
+<br>
+
+<h2 id="只要-lt-label-gt-的for属性值-lt-input-gt-的id属性值的话-用户鼠标点击-label-元素内的文本，就会切换到控件本身。"><a href="#只要-lt-label-gt-的for属性值-lt-input-gt-的id属性值的话-用户鼠标点击-label-元素内的文本，就会切换到控件本身。" class="headerlink" title="只要&lt;label&gt;的for属性值 == &lt;input&gt;的id属性值的话, 用户鼠标点击 label 元素内的文本，就会切换到控件本身。"></a>只要&lt;label&gt;的for属性值 == &lt;input&gt;的id属性值的话, 用户鼠标点击 label 元素内的文本，就会切换到控件本身。</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"male"</span>&gt;</span>Male<span class="tag">&lt;/<span class="name">label</span>&gt;</span> //for属性</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">id</span>=<span class="string">"male"</span> /&gt;</span> //id属性</span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"female"</span>&gt;</span>Female<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">id</span>=<span class="string">"female"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h2 id="复选框-lt-input-type-”checkbox”-gt"><a href="#复选框-lt-input-type-”checkbox”-gt" class="headerlink" title="复选框 &lt;input type=”checkbox”&gt;"></a>复选框 &lt;input type=”checkbox”&gt;</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    你的爱好(可多选): <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> 游泳 <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> 健身 <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> 跑步 <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article id="post-401 HTML/链接" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-26T05:50:33.411Z"><a href="/2020/04/26/401 HTML/链接/">2020-04-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/26/401 HTML/链接/">401 HTML/链接</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接 "></a>超链接 <a></h2><h3 id="连接外部页面"><a href="#连接外部页面" class="headerlink" title="连接外部页面"></a>连接外部页面</h3><p>可以在图片上创建超链接, 即, 点击图片, 就跳转页面. 只要把图片<img>包括进a标签中即可.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.abc.com"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">'./某图片.jpg'</span> <span class="attr">alt</span>=<span class="string">'图片说明'</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="链接到本页内的锚点处"><a href="#链接到本页内的锚点处" class="headerlink" title="链接到本页内的锚点处"></a>链接到本页内的锚点处</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">'锚点'</span>&gt;</span>我是锚点处<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="comment">&lt;!-- 设置锚点 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">'#锚点'</span>&gt;</span>点我跳跃到锚点处<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果浏览器找不到锚点，就会定位到文档的顶端, 不会有错误发生。</p>
+<br/>
+
+<h2 id="连接js文件"><a href="#连接js文件" class="headerlink" title="连接js文件"></a>连接js文件</h2><br/>
+
+<h2 id="连接css文件"><a href="#连接css文件" class="headerlink" title="连接css文件"></a>连接css文件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>  <span class="attr">type</span>=<span class="string">"text/css"</span>  <span class="attr">href</span>=<span class="string">"./mystyle.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rel</td>
+<td>规定当前文档与被链接文档之间的关系。上例, rel 属性表明被链接的文档是个css样式表.</td>
+</tr>
+<tr>
+<td>href</td>
+<td>用于指定超链接目标的 URL.<br />href 即 Hypertext Reference</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article id="post-11 English/经济学人/2020-02" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-26T01:10:11.413Z"><a href="/2020/04/26/11 English/经济学人/2020-02/">2020-04-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/26/11 English/经济学人/2020-02/">11 English/经济学人/2020-02</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>eco 第二篇文章</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article id="post-hello-world" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-26T01:10:11.410Z"><a href="/2020/04/26/hello-world/">2020-04-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/26/hello-world/">Hello World</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article id="post-11 English/经济学人/2020-01" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-25T02:17:18.000Z"><a href="/2020/04/25/11 English/经济学人/2020-01/">2020-04-25</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/25/11 English/经济学人/2020-01/">eco 2020-01</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>eco 2020-01 文章…</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article id="post-开篇" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2020-04-25T01:27:07.000Z"><a href="/2020/04/25/开篇/">2020-04-25</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2020/04/25/开篇/">开篇</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="as_sitesearch" value="yoursite.com">
+  </form>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2020 m_v_priest
+  
+</div>
+<div class="clearfix"></div></footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
