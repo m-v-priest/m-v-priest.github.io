@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>
+    html_表单 | m_v_priest的博客
+  </title>
+  <meta name="description" content="m_v_priest的github hexo博客">
+  
+  <meta name="keywords" content="
+  html,表单
+  ">
+  
+  <meta name="author" content="m_v_priest">
+
+  <meta http-equiv="Cache-Control" content="no-transform"/>
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="theme-color" content="#1e2327">
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+
+  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+  
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body id="replica-app">
+
+<nav class="navbar-wrapper">
+  <div class="navbar">
+    <div class="container clearfix">
+      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
+
+      <div class="navbar-search float-left desktop-only">
+        <div class="navbar-search-form">
+          <label for="gsc-i-id1">This website</label>
+          <div id="google-search">
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav float-left">
+        
+        <li><a href="/archives">Archives</a></li>
+        
+        
+        <li><a href="/categories">Categories</a></li>
+        
+        
+        <li><a href="/tags">Tags</a></li>
+        
+        
+        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
+        
+      </ul>
+
+      <ul class="navbar-nav user-nav float-right desktop-only">
+        <li class="user-nav-notification">
+          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
+        </li>
+        <li>
+          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
+        </li>
+        <li class="user-nav-logo">
+          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="main-container">
+  <header class="header-wrapper desktop-only">
+  <div class="container header-site-detail">
+    <ul class="header-toolbar">
+      <li class="clearfix">
+        <a href="/archives" class="header-toolbar-left"><i
+                  class="fa fa-file-text"></i> Posts </a>
+        <a href="/archives"
+           class="header-toolbar-right"> 5 </a>
+      </li>
+      <li>
+        <a href="/tags" class="header-toolbar-left"><i
+                  class="fa fa-tags"></i> Tags </a>
+        <a href="/tags"
+           class="header-toolbar-right"> 6 </a>
+      </li>
+      <li>
+        <a href="/categories" class="header-toolbar-left"><i
+                  class="fa fa-folder-open"></i> Categories </a>
+        <a href="/categories"
+           class="header-toolbar-right"> 2 </a>
+      </li>
+    </ul>
+    <h2 class="header-title">
+      <i class="fa fa-book text-muted"></i>
+      <a href="/">m_v_priest的博客</a>
+      
+      
+    </h2>
+  </div>
+
+  <div class="container">
+    <div class="header-tab-wrapper clearfix">
+      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
+      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
+      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
+      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
+      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="post-container container">
+  <h3>
+    <i class="fa fa-user-o"></i>
+    m_v_priest
+
+    <span class="post-date float-right" title="{{moment(1587950035810).format('MMM DD, YYYY, h:mm:ss A')}}">
+      
+          <i class="fa fa-pencil-square-o"></i>
+      
+      {{moment(1587950035810).fromNow()}}
+    </span>
+  </h3>
+
+  <article class="post-content">
+    <h1>html_表单</h1>
+    <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_单行输入框_input_typetext">单行输入框 &lt;input type="text"&gt;</a></li>
+<li><a href="#_提交按钮_input_typesubmit">提交按钮 &lt;input type="submit"&gt;</a>
+<ul class="sectlevel3">
+<li><a href="#_关于formaction属性">关于formaction属性</a></li>
+</ul>
+</li>
+<li><a href="#_上传文件_input_typefile">上传文件 &lt;input type="file"&gt;</a></li>
+<li><a href="#_表单飞地">表单飞地</a></li>
+<li><a href="#_表单域组合框_fieldset">表单域组合框 &lt;fieldset&gt;</a></li>
+<li><a href="#_多行文本框_textarea">多行文本框 &lt;textarea&gt;</a></li>
+<li><a href="#_单选按钮输入_input_typeradio">单选按钮输入 &lt;input type="radio"&gt;</a></li>
+<li><a href="#_只要label的for属性值_input的id属性值的话_用户鼠标点击_label_元素内的文本就会切换到控件本身">只要&lt;label&gt;的for属性值 == &lt;input&gt;的id属性值的话, 用户鼠标点击 label 元素内的文本，就会切换到控件本身。</a></li>
+<li><a href="#_复选框_input_typecheckbox">复选框 &lt;input type="checkbox"&gt;</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<hr>
+<div class="paragraph">
+<p>用&lt;form&gt; 元素来定义 HTML 表单.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_单行输入框_input_typetext">单行输入框 &lt;input type="text"&gt;</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span>&gt;</span>
+    用户名 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span></span>
+<span class="tag">    <span class="attr">name</span>=<span class="string">'userName'</span></span>
+<span class="tag">    <span class="attr">value</span>=<span class="string">'zzr'</span></span>
+<span class="tag">    <span class="attr">size</span>=<span class="string">'40'</span> &gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">属性</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">功能</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">能给本表单元素起个名字. &lt;br /&gt;要想JavaScript拿到表单元素中的值, 必须给表单元素添加name属性! 否则无法引用到本表单元素.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">输入框中的值</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">设置文本框的长度, 注意, 值是个字符串</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_提交按钮_input_typesubmit">提交按钮 &lt;input type="submit"&gt;</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'usrName'</span> <span class="attr">value</span>=<span class="string">'defalut your name'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">'usrPwd'</span> <span class="attr">value</span>=<span class="string">'defalut your password'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>按钮提交后, get方法会把你表单的值, 放在url中传送, 如下</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html">http://.../xxx.php?usrName=defalut+your+name &amp;usrPwd=defalut+your+password</code></pre></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">属性</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">功能</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">action</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">注意: <strong>action属性是属于&lt;form&gt;元素的, 而不是属于&lt;input&gt;元素.</strong>&lt;br /&gt;如果省略 action 属性，则 action 会被设置为当前页面 (即本表单会被提交到当前页面)。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formaction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formaction 属性(单词拆开来即form action), <strong>可用在 type="submit" 以及 type="image"上</strong>。&lt;br /&gt;<strong>该属性的权限比action属性更高!</strong> 如果表单中两个属性都存在, 则只听formaction的, 而忽略掉action属性.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name属性必填! 只有设置了 name 属性的表单元素, 才能在提交表单时传递它们的值到服务器上。</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">对于文本框来说, value属性就是文本框中的文字内容.&lt;br /&gt;而对于submit按钮来说, value属性是按钮上的文字.</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="sect3">
+<h4 id="_关于formaction属性">关于formaction属性</h4>
+<div class="paragraph">
+<p>比如:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"123.php"</span>  <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span>  //action属性
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'usrName'</span> <span class="attr">value</span>=<span class="string">'defalut your name'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">formaction</span> = <span class="string">'456.js'</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span> // formaction属性 <span class="tag">&lt;<span class="name">--会提交给456.js,</span> 因为<span class="attr">formaction</span>属性的权限最高</span>
+&lt;/form&gt;</code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_上传文件_input_typefile">上传文件 &lt;input type="file"&gt;</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">value</span>=<span class="string">""</span> <span class="attr">multiple</span>=<span class="string">"multiple"</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"click to upload files"</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">属性</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">功能</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">multiple</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">允许上传多个文件. &lt;br /&gt;multiple属性适用于以下输入类型：email 和 file。</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_表单飞地">表单飞地</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>一个表单离散元素, 只要有form属性, 并且给它赋值一个某表单的id属性的值, 该离散元素, 就属于某表单的势力范围内.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">method</span>=<span class="string">"GET"</span> <span class="attr">id</span>=<span class="string">'form_china'</span>&gt;</span> //id属性
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'chineseName'</span> <span class="attr">value</span>=<span class="string">'zzr'</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span>
+
+<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'chineseName'</span> <span class="attr">value</span>=<span class="string">'wyy'</span> <span class="attr">form</span>=<span class="string">'form_china'</span>&gt;</span>   //from属性 <span class="tag">&lt;<span class="name">--注意,</span> 这个<span class="attr">wyy</span>表单, 位于 <span class="attr">form</span> 元素之外，但由于设定了<span class="attr">form</span>属性, 捆绑了上面<span class="attr">form</span>的<span class="attr">id</span>值, 所以它仍然是上面表单的一部分。从提交按钮后, 可以看出, <span class="attr">wyy</span>也被提交了<span class="attr">.</span></span></code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_表单域组合框_fieldset">表单域组合框 &lt;fieldset&gt;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&lt;fieldset&gt; 元素, 可以把n个表单元素, 用一个外框线包裹起来, 相当于逻辑上分组.</p>
+</div>
+<div class="paragraph">
+<p>并且还可以使用&lt;legend&gt; 元素, 为 &lt;fieldset&gt; 元素定义一个标题。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.js"</span> <span class="attr">method</span>=<span class="string">"GET"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">fieldset</span>&gt;</span> //组合框
+        <span class="tag">&lt;<span class="name">legend</span>&gt;</span>登录信息<span class="tag">&lt;/<span class="name">legend</span>&gt;</span> //组合框的标题
+        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">'usrName'</span> <span class="attr">value</span>=<span class="string">'your name'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">'usrPwd'</span> <span class="attr">value</span>=<span class="string">'your password'</span>&gt;</span> <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">'click to submit'</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_多行文本框_textarea">多行文本框 &lt;textarea&gt;</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"发送地址"</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">textarea</span></span>
+<span class="tag">    <span class="attr">name</span>=<span class="string">"message"</span></span>
+<span class="tag">    <span class="attr">rows</span>=<span class="string">"10"</span></span>
+<span class="tag">    <span class="attr">cols</span>=<span class="string">"20"</span>&gt;</span>
+    内容...
+    <span class="tag">&lt;/<span class="name">textarea</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">属性</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">功能</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文本框的可见行数</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">文本框的可见宽度</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_单选按钮输入_input_typeradio">单选按钮输入 &lt;input type="radio"&gt;</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span>&gt;</span>
+    您的性别: <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"男性"</span> <span class="attr">name</span>=<span class="string">'sex'</span>&gt;</span> 男性 <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"female"</span> <span class="attr">name</span>=<span class="string">'sex'</span>&gt;</span> 女性
+    <span class="tag">&lt;<span class="name">hr</span>&gt;</span>
+    您的年龄: <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">'age'</span> <span class="attr">value</span>=<span class="string">0</span>&gt;</span> 成年 <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">'age'</span> <span class="attr">value</span>=<span class="string">1</span>&gt;</span> 未成年
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">属性</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">功能</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name属性相同者, 会分在同一组. 即, 每组有自己的单选.</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_只要label的for属性值_input的id属性值的话_用户鼠标点击_label_元素内的文本就会切换到控件本身">只要&lt;label&gt;的for属性值 == &lt;input&gt;的id属性值的话, 用户鼠标点击 label 元素内的文本，就会切换到控件本身。</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"male"</span>&gt;</span>Male<span class="tag">&lt;/<span class="name">label</span>&gt;</span> //for属性
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">id</span>=<span class="string">"male"</span> /&gt;</span> //id属性
+    <span class="tag">&lt;<span class="name">br</span> /&gt;</span>
+
+    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"female"</span>&gt;</span>Female<span class="tag">&lt;/<span class="name">label</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">id</span>=<span class="string">"female"</span> /&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_复选框_input_typecheckbox">复选框 &lt;input type="checkbox"&gt;</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">form</span>&gt;</span>
+    你的爱好(可多选): <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> 游泳 <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> 健身 <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span> 跑步 <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">form</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
+  </article>
+</div>
+
+
+    
+
+
+
+
+</div>
+
+<div class="footer-wrapper container">
+  <footer class="footer clearfix">
+    <div class="clearfix">
+    <a href="http://yoursite.com" class="footer-logo">
+      <i class="fa fa-github"></i>
+    </a>
+    <ul class="footer-social-link">
+      <li>© 2019 m_v_priest</li>
+      <li><a href="http://yoursite.com">Home</a></li>
+      
+    </ul>
+    <div class="footer-theme-info">
+      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica" target="_blank" rel="noopener">Replica</a>
+      by <a href="//github.com/sabrinaluo" target="_blank" rel="noopener">Hiitea</a> ❤ Powered by Hexo
+    </div>
+    </div>
+    
+  </footer>
+</div>
+
+
+
+
+<script src="/js/main.js"></script>
+
+</body>
+</html>

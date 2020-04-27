@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    Hello World | m_v_priest的博客
+    html_链接 | m_v_priest的博客
   </title>
   <meta name="description" content="m_v_priest的github hexo博客">
   
   <meta name="keywords" content="
-  
+  html,链接
   ">
   
   <meta name="author" content="m_v_priest">
@@ -130,30 +130,103 @@
     <i class="fa fa-user-o"></i>
     m_v_priest
 
-    <span class="post-date float-right" title="{{moment(1587863411410).format('MMM DD, YYYY, h:mm:ss A')}}">
+    <span class="post-date float-right" title="{{moment(1587951686674).format('MMM DD, YYYY, h:mm:ss A')}}">
       
           <i class="fa fa-pencil-square-o"></i>
       
-      {{moment(1587863411410).fromNow()}}
+      {{moment(1587951686674).fromNow()}}
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>Hello World</h1>
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+    <h1>html_链接</h1>
+    <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_超链接_a">超链接 &lt;a&gt;</a>
+<ul class="sectlevel3">
+<li><a href="#_连接外部页面">连接外部页面</a></li>
+<li><a href="#_链接到本页内的锚点处">链接到本页内的锚点处</a></li>
+</ul>
+</li>
+<li><a href="#_连接js文件">连接js文件</a></li>
+<li><a href="#_连接css文件">连接css文件</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_超链接_a">超链接 &lt;a&gt;</h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="_连接外部页面">连接外部页面</h4>
+<div class="paragraph">
+<p>可以在图片上创建超链接, 即, 点击图片, 就跳转页面. 只要把图片&lt;img&gt;包括进a标签中即可.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.abc.com"</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">'./某图片.jpg'</span> <span class="attr">alt</span>=<span class="string">'图片说明'</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+<div class="sect3">
+<h4 id="_链接到本页内的锚点处">链接到本页内的锚点处</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">'锚点'</span>&gt;</span>我是锚点处<span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="comment">&lt;!-- 设置锚点 --&gt;</span>
+<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">'#锚点'</span>&gt;</span>点我跳跃到锚点处<span class="tag">&lt;/<span class="name">a</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>如果浏览器找不到锚点，就会定位到文档的顶端, 不会有错误发生。</p>
+</div>
+<hr>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_连接js文件">连接js文件</h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_连接css文件">连接css文件</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html"><span class="tag">&lt;<span class="name">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>  <span class="attr">type</span>=<span class="string">"text/css"</span>  <span class="attr">href</span>=<span class="string">"./mystyle.css"</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">head</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">属性</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">功能</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">规定当前文档与被链接文档之间的关系。上例, rel 属性表明被链接的文档是个css样式表.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">用于指定超链接目标的 URL.&lt;br /&gt;href 即 Hypertext Reference</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</div>
+</div>
   </article>
 </div>
 

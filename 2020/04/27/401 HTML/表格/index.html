@@ -8,12 +8,12 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>
-    Hello World | m_v_priest的博客
+    html_表格 | m_v_priest的博客
   </title>
   <meta name="description" content="m_v_priest的github hexo博客">
   
   <meta name="keywords" content="
-  
+  html,表格
   ">
   
   <meta name="author" content="m_v_priest">
@@ -130,30 +130,72 @@
     <i class="fa fa-user-o"></i>
     m_v_priest
 
-    <span class="post-date float-right" title="{{moment(1587863411410).format('MMM DD, YYYY, h:mm:ss A')}}">
+    <span class="post-date float-right" title="{{moment(1587951579188).format('MMM DD, YYYY, h:mm:ss A')}}">
       
           <i class="fa fa-pencil-square-o"></i>
       
-      {{moment(1587863411410).fromNow()}}
+      {{moment(1587951579188).fromNow()}}
     </span>
   </h3>
 
   <article class="post-content">
-    <h1>Hello World</h1>
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <h1>html_表格</h1>
+    <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_表格">表格</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_表格">表格</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>html5 已经废弃\&lt;table\&gt;的cellspacing和cellpadding属性, 现在要通过css来定义表格样式.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-html" data-lang="html"><pre><code class="highlight html">//表格的css
+<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">'text/css'</span>&gt;</span>
+    table &#123;
+        border-collapse: collapse; //collapse能让表格的边框重叠在一起, 而非是双线
+        border: solid 1px Black;
+    &#125;
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+    table td &#123;
+        border: solid 1px Black;
+        padding: 3px
+    &#125;
+<span class="tag">&lt;/<span class="name">style</span>&gt;</span>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+//表格本身
+<span class="tag">&lt;<span class="name">table</span>&gt;</span> //定义本
+    <span class="tag">&lt;<span class="name">caption</span>&gt;</span>表格标题<span class="tag">&lt;/<span class="name">caption</span>&gt;</span> //定义表格标题
+    <span class="tag">&lt;<span class="name">tr</span>&gt;</span> //定义行(table row), 表格中, 第一行是留给表头的, 第二行开始都是数据行.
+        <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题1<span class="tag">&lt;/<span class="name">th</span>&gt;</span> //定义表头(table header cell)
+        <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题2<span class="tag">&lt;/<span class="name">th</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">th</span>&gt;</span>列标题3<span class="tag">&lt;/<span class="name">th</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1-1<span class="tag">&lt;/<span class="name">td</span>&gt;</span> //定义表格的单元(table data cell)
+        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1-2<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">td</span>&gt;</span>1-3<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">tr</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2-1<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2-2<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">td</span>&gt;</span>2-3<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">table</span>&gt;</span></code></pre></code></pre>
+</div>
+</div>
+<hr>
+</div>
+</div>
   </article>
 </div>
 
